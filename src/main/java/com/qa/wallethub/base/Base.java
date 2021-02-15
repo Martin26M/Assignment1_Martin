@@ -12,15 +12,20 @@ public class Base {
 	
 	public static Properties prop;
 	public static WebDriver driver;
+	
+	
 	public Base() throws IOException 
 	
 	{
-	FileInputStream fis = new FileInputStream("./data.properties");
+	
+		prop =new Properties();
+	FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\wallethub\\config\\data.properties");
 	
 	prop.load(fis);
 	
 	
 	}
+	
 	
 	public void Initialize() {
 		
@@ -38,23 +43,13 @@ public class Base {
 				}
 				
 		
-		
+		driver.get("https://kbroman.org/github_tutorial/pages/init.html");
+		driver.manage().window().maximize();
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}}
 	
 	
 	
 
-}
