@@ -43,7 +43,7 @@ public class Base {
 				}
 				
 		
-		driver.get("https://kbroman.org/github_tutorial/pages/init.html");
+		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
 	}
 	
